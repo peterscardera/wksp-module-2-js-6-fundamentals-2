@@ -1,4 +1,4 @@
-let verifyEquals = require('./verify-equals.js');
+let verifyEquals = require('../../assets/verify-equals.js');
 
 // Problem 11
 // ----------
@@ -7,11 +7,23 @@ let verifyEquals = require('./verify-equals.js');
 
 function f(arr) {
 
+    if(arr.length === 0) {
+        return 0;
+    }
+    
+    let answer = arr.reduce(function(acc, val) {
+       if(typeof val === "number") {
+           return  acc + val;
+       } else {
+           return acc
+       }
+    },0)
+    return answer
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = [[1,2],[],[2,2],[3,2],[7,7]];
+let outputs = [3,0,4,5,14];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

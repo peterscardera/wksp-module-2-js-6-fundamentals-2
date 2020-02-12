@@ -12,8 +12,14 @@ let verifyEquals = require('../../assets/verify-equals');
 //  - Convert the filled array into a string (use the join method) and return it
 
 function f(str) {
+    let reversedString = ""
 
+    for(i = str.length - 1; i >= 0; i--) {
+        reversedString += str[i]
+    }
+    return reversedString
 }
+
 
 // We need 5 test cases.
 let inputs = [];

@@ -18,8 +18,36 @@ is a variable in function, or method, definition.
 
 ```js
 // Example
+function greeting(names) {
+names.forEach(function(name) {
+    console.log(`${names}` want some bacon?) //we cannot do return as it doesnt return a new array the forEach
+})
+return `${}`! want some bacon?;
+}
 
+greeting(["peter", "bob", "claire])
+
+function greeting(names) {
+names.map(function(name) {
+    return `${names}` want some bacon? //we cannot do return as it doesnt return a new array the forEach
+})
+return `${}`! want some bacon?;
+}
+
+greeting(["peter", "bob", "claire])
+
+***WE WOULD HAVE TO DO BELOW***
+
+function greeting(names) {
+return names.forEach(function(name) {
+    return `${names}` want some bacon? //we cannot do return as it doesnt return a new array the forEach
+})
+return `${}`! want some bacon?;
+}
+
+console.log(greeting(["peter", "bob", "claire]))
 ```
+
 
 ---
 
@@ -41,7 +69,7 @@ function f() {
     console.log("hello");
 }
 
-f("bye");
+f("bye"); it will STILL CONSOLE.log HELLO
 ```
 
 ---
@@ -76,6 +104,8 @@ function someFunc() {
 There are 2 other ways to _define_ a function
 
 ```js
+THIS IS A FUNCTION EXPRESSION ITS NOT IN MEMORY UNTIL PROGRAM REACHES THAT POINT
+
 const someFunc = function() {
     // do something...
 }
@@ -113,12 +143,18 @@ I will let you know when to _not_ use a particular syntax.
 // Example
 someFunc = () => {
     return 'bacon';
+    return 'd' // this will never get reached as well
+    ANYTHING UNDER RETURN GETS IGNORED
 }
 
 console.log(someFunc());
 ```
 
 `return` is the end of the line...
+
+
+
+
 
 ---
 

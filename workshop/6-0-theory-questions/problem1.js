@@ -22,23 +22,26 @@ function reverseString(str) {
 // Q1
 square(decrement(square(decrement(3))));
 
-
-
+// 9 -> 3-10 = 2 , 2*2 =4 , 4-1 =3, 3*3 = 9
 
 // Q2
 decrement(decrement(square(square(3))));
 
-
-
+//79 ->  3*3 = 9, 9*8 = 81, 81-1=80, 80-1 = 79
 
 // Q3
 duplicateString(reverseString("hello"));
 
-
-
+//1 splits all the letters h e l l o in an array
+//2 reverse all the letter in the array o l l e h
+//3 joins all the letters to make olleh
+//4 the duplicate function concatenates the same result of reverse string to ==> olleholleh
 
 // Q4
 reverseString(duplicateString(duplicateString("foo")));
 
 
+//1 foofoo
+//2 foofoofoofoo
+//3 oofoofoofoof
 

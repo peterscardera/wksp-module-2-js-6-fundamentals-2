@@ -110,4 +110,15 @@ _Let's talk about test-driven development a little._
 
 ### What is a test?
 
+
+
+function  sum(num1, num2) {
+return num1 + 2;
+}
+
+function sumTest(x,y,z) {
+    return sum(x,y) === z // to return true or false
+}
+
+sumTest(5,5,10)
 ---

@@ -13,12 +13,21 @@ let verifyEquals = require('../../assets/verify-equals');
 //    - A for loop might be helpful
 
 function f(str) {
-
+    
+    let maxString = "";
+    let splitter = str.split(" ");
+   
+    for( let i = 0; i < splitter.length; i++) {
+        if( maxString < splitter[i].length ) {
+            maxString = splitter[i]
+        }
+    }
+    return maxString
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ["Javascript for the win","This is","Longuest string","hello worlds again","JS aka ECMAScript"];
+let outputs = ["Javascript", "This","longuest", "worlds","ECMAScript"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

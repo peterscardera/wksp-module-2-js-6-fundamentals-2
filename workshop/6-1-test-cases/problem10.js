@@ -12,11 +12,22 @@ let verifyEquals = require('../../assets/verify-equals');
 
 function f(str) {
 
+  let splittedString = str.split(" ") //as it must be in array to use the array methods
+  let answer = [];
+  
+  for(let i = 0;i < splittedString.length; i++) {
+      let capitalMaker = splittedString[i].charAt(0).toUpperCase() + splittedString[i].slice(1).toLowerCase();
+      answer.push(capitalMaker)
+      
+  }
+  return answer.join(" ")
+  
+  
 }
 
 // Test cases
-let inputs = [];
-let outputs = [];
+let inputs = ["HELLO THIS IS A TEST","lets see if it works", "HeLLO WoRlD", "DeBUGGER","LAST TesT"];
+let outputs = ["Hello This Is A Test","Lets See If It Works", "Hello World","Debugger","Last Test"];
 
 // STOP -----------------------------------------------------------------
 // No code changes below. This is the actual test that will run your test cases and validate your function.

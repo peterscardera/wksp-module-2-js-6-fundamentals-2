@@ -24,6 +24,9 @@ var greeting = 'Hello';
 // a. 'Hello'
 // b. undefined
 // c. Uncaught ReferenceError: greeting is not defined
+
+
+//VAR WILL ONLY BRING THE DECLARATION ALL THE WAY TO THE TOP not the value of "hello" ****
 ```
 
 ---
@@ -73,5 +76,5 @@ var yourName = 'Fred';
 ---
 
 Of note, it is not the declarations themselves that are moved to the top, just the JS compiler that reading them first and alloting them memory space.
-
+The call is NOT hoisted
 ---
